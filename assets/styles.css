@@ -349,3 +349,48 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.06;letter-s
 }
 
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+
+
+/* =====================================================================
+   THEME: NAVY  — the corporate / sports world
+   Add class="theme-navy" to <body> to remap the dark (pine) surfaces to
+   a deep estate navy. Champagne gold accents are preserved.
+   ===================================================================== */
+.theme-navy{
+  --pine:      #0F2A40;   /* was #0E2E23 */
+  --pine-deep: #081A29;   /* was #08201A */
+  --forest:    #1B3C57;   /* was #1B4332 */
+}
+.theme-navy .hero-bg::after{background:linear-gradient(180deg,rgba(8,26,41,.55) 0%,rgba(8,26,41,.2) 40%,rgba(8,26,41,.9) 100%)}
+.theme-navy .phero .hero-bg::after{background:linear-gradient(180deg,rgba(8,26,41,.5),rgba(8,26,41,.85))}
+.theme-navy .nav::before{background:rgba(8,26,41,.94)}
+.theme-navy .arch{background:radial-gradient(120% 80% at 50% 0%, #1f4a6b 0%, var(--pine) 55%, var(--pine-deep) 100%)}
+.theme-navy .hero-bg .ph{background-color:var(--pine)}
+.theme-navy .ph{color:#bcd2e0}
+.theme-navy .ph span{color:#d7e2ea}
+.theme-navy .ph small{color:#8299a8}
+
+/* =====================================================================
+   HOME: "Two occasions" two-worlds split + colour-coded hero CTAs
+   ===================================================================== */
+.twoworlds{
+  background:linear-gradient(90deg,
+     var(--pine) 0%, var(--pine) 45%,
+     #123457 55%, #0F2A40 100%);
+}
+.twoworlds .stars{position:relative}
+.twoworlds .stars::before{
+  content:"";position:absolute;top:-10px;bottom:-10px;left:50%;width:1px;
+  background:linear-gradient(180deg,transparent,rgba(219,196,140,.4),transparent);
+}
+/* readability against the dark split */
+.twoworlds .star .eyebrow{color:var(--gold-soft)}
+.twoworlds .star:nth-child(1) p{color:#d3ded7}
+.twoworlds .star:nth-child(2) p{color:#c9d6e1}
+
+/* hero CTAs colour-coded to their world, unified by champagne gold */
+.cta-wed,.cta-corp{color:var(--gold-soft);border:1px solid rgba(193,160,83,.7);transition:all .4s var(--ease)}
+.cta-wed{background:rgba(19,51,37,.82)}    /* estate green */
+.cta-corp{background:rgba(14,40,62,.82)}   /* deep navy */
+.cta-wed:hover,.cta-corp:hover{background:var(--gold);color:var(--pine-deep);border-color:var(--gold)}
+@media(max-width:560px){ .cta-wed,.cta-corp{justify-content:center} }
