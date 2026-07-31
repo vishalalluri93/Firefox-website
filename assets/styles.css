@@ -400,3 +400,30 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.06;letter-s
 .phero .crumbs{color:var(--gold-soft)}
 .phero .hero-bg::after{background:linear-gradient(180deg,rgba(8,26,33,.5) 0%,rgba(8,26,33,.32) 38%,rgba(8,26,33,.92) 100%)}
 .theme-navy .phero .hero-bg::after{background:linear-gradient(180deg,rgba(6,22,36,.5) 0%,rgba(6,22,36,.32) 38%,rgba(6,22,36,.94) 100%)}
+
+/* =====================================================================
+   FACILITIES SHOWCASE — captioned tiles ("everything under one roof")
+   ===================================================================== */
+.fac-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.fac-grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.fac{position:relative;overflow:hidden;margin:0;aspect-ratio:4/3;
+  border-radius:var(--arch-sm) var(--arch-sm) 4px 4px;background:var(--pine)}
+.fac img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform 1s var(--ease)}
+.fac:hover img{transform:scale(1.06)}
+.fac::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,26,20,0) 38%,rgba(8,26,20,.86) 100%)}
+.fac .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:1.15rem 1.2rem;color:#fff}
+.fac .cap span{display:block;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold-soft);margin-bottom:.28rem}
+.fac .cap b{display:block;font-family:var(--serif);font-weight:600;font-size:1.28rem;line-height:1.15}
+.fac--feature{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.fac--feature .cap b{font-size:1.7rem}
+@media(max-width:900px){
+  .fac-grid,.fac-grid.cols-3{grid-template-columns:1fr 1fr}
+  .fac--feature{grid-column:span 2;grid-row:auto;aspect-ratio:4/3}
+}
+@media(max-width:560px){
+  .fac-grid,.fac-grid.cols-3{grid-template-columns:1fr}
+  .fac--feature{grid-column:span 1}
+}
