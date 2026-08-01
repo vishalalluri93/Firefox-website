@@ -138,7 +138,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
 .space .band-img::after{background:linear-gradient(180deg,rgba(var(--veil),.20),rgba(var(--veil),.46) 45%,rgba(var(--veil),.92))}
 .space.right .band-img::after{background:linear-gradient(180deg,rgba(var(--veil),.20),rgba(var(--veil),.46) 45%,rgba(var(--veil),.92))}
 .space-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;
-  justify-content:flex-end;align-items:center;text-align:center;color:var(--ivory);text-shadow:0 1px 16px rgba(var(--veil),.6)}
+  justify-content:flex-end;align-items:center;text-align:center;color:var(--ivory);text-shadow:0 1px 16px rgba(var(--veil),.6);padding-block:clamp(2.5rem,5vw,3.5rem)}
 .space.right .space-inner{align-items:center;text-align:center}
 .space h3{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300}
 .space .meta{font-size:.62rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
