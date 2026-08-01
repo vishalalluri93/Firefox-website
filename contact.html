@@ -1,119 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact &amp; Enquire — Firefox Sports &amp; Resorts, Hyderabad</title>
-<meta name="description" content="Enquire about weddings, corporate outings, stays and sports at Firefox Sports & Resorts, Surangal Village, Moinabad, Hyderabad.">
-<link rel="stylesheet" href="assets/styles.css">
+<title>Contact &amp; enquire — Firefox Sports &amp; Resorts, Moinabad</title>
+<meta name="description" content="Enquire about weddings, corporate escapes, day outings, sport and rooms at Firefox Sports &amp; Resorts, Surangal Village, Moinabad — 20 km from Hyderabad. Weddings +91 96767 16888.">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-latin-300-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/mulish-latin-400-normal.woff2" crossorigin>
+<link rel="stylesheet" href="assets/band.css"><script>document.documentElement.className+=" js";</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "EventVenue"],
+  "name": "Firefox Sports & Resorts",
+  "description": "A 15-acre events estate at Moinabad, 20 km from Hyderabad \u2014 weddings and corporate escapes, with 100 rooms and a large indoor sports complex on site.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sy. No. 127, Surangal Village",
+    "addressLocality": "Moinabad",
+    "addressRegion": "Telangana",
+    "postalCode": "501504",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91 96767 16888",
+  "email": "gm@firefoxsportsandresorts.com"
+}
+</script>
 </head>
 <body>
-
-<header class="nav" id="nav">
-  <a class="brand" href="index.html" aria-label="Firefox Sports and Resorts — home">
-    <img class="mark" src="assets/img/logo.png" alt="Firefox Sports and Resorts">
-    <span><b>Firefox</b><small>Sports &amp; Resorts</small></span>
-  </a>
-  <nav class="nav-links" aria-label="Primary">
-    <a href="weddings.html">Weddings</a>
-    <a href="corporate.html">Corporate</a>
-    <a href="sports.html">Sports</a>
-    <a href="hotel.html">Hotel</a>
-    <a href="dayouts.html">Day Outings</a>
-    <a class="btn btn-gold" href="contact.html" aria-current="page">Enquire</a>
-  </nav>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Firefox Sports and Resorts — home">
+      <img src="assets/img/logo.png" alt="" width="283" height="211">
+      <span class="wm">Firefox<span>Sports &amp; Resorts</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="weddings.html">Weddings</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="estate.html">The Estate</a>
+      <a href="sports.html">Sport</a>
+      <a href="hotel.html">Stay</a>
+      <a class="btn-enq" href="contact.html" aria-current="page">Enquire</a>
+    </nav>
+  </div>
 </header>
+<main id="main">
 
-<section class="phero" style="min-height:52svh">
-  <div class="hero-bg"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7-5-7-11a7 7 0 0 1 14 0c0 6-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><b>Contact hero</b><span>Estate entrance or a wide view of the grounds</span><small>2400 × 1200 · landscape</small></div></div>
-  <div class="hero-inner">
-    <p class="crumbs reveal"><a href="index.html">Home</a> &nbsp;/&nbsp; Contact</p>
-    <h1 class="display-l reveal" data-d="1" style="margin:.8rem 0 .4rem">Let's plan your visit.</h1>
-    <p class="lede reveal" data-d="2">Tell us the occasion — we'll come back with availability and next steps.</p>
+<section class="band hero">
+  <div class="band-img"><img src="assets/img/conv-facade.jpg" alt="The convention centre and the drive into the estate" fetchpriority="high" width="1600" height="1067"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow eyebrow--light">Contact</p>
+    <h1>Let's plan your <em>visit</em>.</h1>
+    <p>Tell us the occasion. We come back with availability and next steps.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="tel:+919676716888">Weddings &middot; +91 96767 16888</a>
+      <a class="btn btn-ghost" href="tel:+919988425777">Rooms &middot; +91 99884 25777</a>
+    </div>
   </div>
 </section>
 
-<section class="section skin-ivory">
+<section class="contact">
   <div class="wrap">
-    <div class="contact-grid">
-      <!-- FORM -->
-      <div class="reveal">
+    <div class="grid">
+      <div>
         <p class="eyebrow">Make an enquiry</p>
-        <h2 class="display-m" style="margin:.5rem 0 1.8rem">Send us the details.</h2>
-        <form id="enquiry" novalidate>
-          <div class="row-2">
+        <h2>Send us the <em>details</em>.</h2>
+        <form class="form" id="enquiry" novalidate>
+          <div class="row">
             <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
             <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
           </div>
-          <div class="row-2">
+          <div class="row">
             <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
             <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date"></div>
           </div>
-          <div class="row-2">
+          <div class="row">
             <div class="field">
               <label for="type">Occasion</label>
               <select id="type" name="type">
                 <option>Wedding or event</option>
-                <option>Corporate outing</option>
-                <option>Sports booking</option>
-                <option>Stay &amp; dining</option>
+                <option>Corporate escape</option>
                 <option>Day outing</option>
+                <option>Sports booking</option>
+                <option>Rooms &amp; stay</option>
                 <option>Summer camp</option>
-                <option>Membership</option>
               </select>
             </div>
             <div class="field"><label for="guests">Guest count</label><input id="guests" name="guests" type="number" min="1" placeholder="e.g. 250"></div>
           </div>
-          <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us a little about what you're planning."></textarea></div>
-          <button class="btn btn-gold btn-lg" type="submit">Send enquiry
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-          <p class="form-note" style="display:none;margin-top:1.2rem;font-size:.9rem;color:var(--gold-deep)"></p>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us a little about what you are planning."></textarea></div>
+          <button class="btn btn-gold" type="submit">Send enquiry</button>
+          <p class="note" role="status" id="enq-note">Prefer to talk? Call the weddings desk on <a href="tel:+919676716888" style="border-bottom:1px solid var(--line)">+91 96767 16888</a> — most enquiries are answered fastest by phone.</p>
+          <noscript><p class="note">This form needs JavaScript. Call <a href="tel:+919676716888" style="border-bottom:1px solid var(--line)">+91 96767 16888</a> or email <a href="mailto:gm@firefoxsportsandresorts.com" style="border-bottom:1px solid var(--line)">gm@firefoxsportsandresorts.com</a>.</p></noscript>
         </form>
       </div>
 
-      <!-- DIRECT CONTACT -->
-      <div class="contact-cards reveal" data-d="1">
-        <div class="ccard">
-          <p class="eyebrow">Weddings &amp; events</p>
-          <a href="tel:+919676716888">+91 96767 16888</a>
-        </div>
-        <div class="ccard">
-          <p class="eyebrow">Rooms &amp; stays</p>
-          <a href="tel:+919988425777">+91 99884 25777</a>
-        </div>
-        <div class="ccard">
-          <p class="eyebrow">General enquiries</p>
-          <a href="tel:+919988435777">+91 99884 35777</a>
-          <a href="tel:+919988583777" style="margin-top:.4rem">+91 99885 83777</a>
-        </div>
-        <div class="ccard">
-          <p class="eyebrow">Email</p>
-          <a href="mailto:gm@firefoxsportsandresorts.com" style="font-size:1.05rem">gm@firefoxsportsandresorts.com</a>
-        </div>
-        <div class="ccard">
-          <p class="eyebrow">Visit the estate</p>
-          <p style="font-family:var(--display);font-size:1.15rem;line-height:1.5;color:var(--ink)">Sy. No. 127, Surangal Village,<br>Moinabad Mandal,<br>Hyderabad, Telangana 501504</p>
-          <p style="margin-top:1rem"><a class="textlink" href="https://www.google.com/maps/search/?api=1&query=Firefox+Sports+and+Resorts+Moinabad+Hyderabad" target="_blank" rel="noopener">Open in Maps
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+      <div>
+        <p class="eyebrow">Speak to a person</p>
+        <h2>Straight <em>through</em>.</h2>
+        <div class="desks">
+          <div class="desk">
+            <p class="eyebrow">Weddings &amp; events</p>
+            <a href="tel:+919676716888">+91 96767 16888</a>
+          </div>
+          <div class="desk">
+            <p class="eyebrow">Rooms &amp; stays</p>
+            <a href="tel:+919988425777">+91 99884 25777</a>
+          </div>
+          <div class="desk">
+            <p class="eyebrow">General enquiries</p>
+            <a href="tel:+919988435777">+91 99884 35777</a>
+            <a href="tel:+919988583777">+91 99885 83777</a>
+          </div>
+          <div class="desk">
+            <p class="eyebrow">Email</p>
+            <a href="mailto:gm@firefoxsportsandresorts.com">gm@firefoxsportsandresorts.com</a>
+          </div>
+          <div class="desk">
+            <p class="eyebrow">Visit the estate</p>
+            <span class="val">Sy. No. 127, Surangal Village,<br>Moinabad Mandal,<br>Hyderabad, Telangana 501504</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="footer">
+<section class="band where">
+  <div class="band-img"><img src="assets/img/aerial.jpg" alt="The estate seen from the air, showing the halls, pool and sports blocks" loading="lazy" width="1600" height="862"></div>
+  <div class="wrap where-inner">
+    <p class="eyebrow eyebrow--light">Getting here</p>
+    <h2>20 minutes past the city.</h2>
+    <dl>
+      <dt>Address</dt><dd>Sy. No. 127, Surangal Village, Moinabad Mandal, Telangana 501504</dd>
+      <dt>Distance</dt><dd>20 km from Hyderabad</dd>
+      <dt>Parking</dt><dd>500+ cars on site</dd>
+    </dl>
+    <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Firefox+Sports+and+Resorts+Moinabad+Hyderabad" target="_blank" rel="noopener">Open in Maps</a>
+  </div>
+</section>
+
+<section class="enquire">
   <div class="wrap">
-    <div class="footer-top">
-      <div><a class="brand" href="index.html"><img class="mark" src="assets/img/logo.png" alt="Firefox Sports and Resorts"><span><b>Firefox</b><small>Sports &amp; Resorts</small></span></a><p class="footer-blurb">A weekend retreat for all seasons and reasons — greenery, sport, celebration and stay, on Hyderabad's edge.</p></div>
-      <div><h6>Occasions</h6><ul><li><a href="weddings.html">Weddings &amp; Events</a></li><li><a href="corporate.html">Corporate Outings</a></li><li><a href="dayouts.html">Day Outings</a></li><li></li></ul></div>
-      <div><h6>The estate</h6><ul><li><a href="sports.html">Sports &amp; Adventure</a></li><li><a href="hotel.html">Hotel</a></li><li><a href="contact.html">Site Visits</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h6>Reach us</h6><ul><li><a href="tel:+919676716888">+91 96767 16888 <span style="color:#8a998f">· Weddings</span></a></li><li><a href="tel:+919988425777">+91 99884 25777 <span style="color:#8a998f">· Rooms</span></a></li><li><a href="mailto:gm@firefoxsportsandresorts.com">gm@firefoxsportsandresorts.com</a></li><li style="color:#a9b8af;font-size:.9rem;margin-top:.4rem">Sy. No. 127, Surangal Village, Moinabad Mandal, Telangana 501504</li></ul></div>
+    <div>
+      <h2>Tours most mornings.</h2>
+      <p>Come and walk it. Bring your guest list.</p>
     </div>
-    <div class="footer-bottom"><span>&copy; <span id="year">2026</span> Firefox Sports &amp; Resorts. All rights reserved.</span><span>Moinabad &middot; Hyderabad &middot; Telangana</span></div>
+    <div class="acts">
+      <a class="btn btn-pine" href="tel:+919676716888">+91 96767 16888</a>
+      <a class="btn btn-dark" href="mailto:gm@firefoxsportsandresorts.com">Email us</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand">
+          <img src="assets/img/logo.png" alt="" loading="lazy" width="283" height="211">
+          <span class="wm">Firefox<span>Sports &amp; Resorts</span></span>
+        </div>
+        <p class="tag">15 acres at Moinabad. Weddings, corporate escapes, sport, rooms.</p>
+      </div>
+      <div>
+        <h4>The estate</h4>
+        <ul>
+          <li><a href="weddings.html">Weddings</a></li>
+          <li><a href="corporate.html">Corporate</a></li>
+          <li><a href="estate.html">The Estate</a></li>
+          <li><a href="sports.html">Sport</a></li>
+          <li><a href="hotel.html">Stay</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Speak to us</h4>
+        <ul>
+          <li>Weddings <a href="tel:+919676716888">+91 96767 16888</a></li>
+          <li>Rooms <a href="tel:+919988425777">+91 99884 25777</a></li>
+          <li>General <a href="tel:+919988435777">+91 99884 35777</a></li>
+          <li><a href="mailto:gm@firefoxsportsandresorts.com">gm@firefoxsportsandresorts.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <ul>
+          <li>Sy. No. 127, Surangal Village</li>
+          <li>Moinabad Mandal</li>
+          <li>Hyderabad, Telangana 501504</li>
+          <li>About 20 km from Hyderabad</li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>&copy; 2026 Firefox Sports &amp; Resorts</span>
+      <span>Weddings &middot; Corporate escapes &middot; Sport &middot; Rooms</span>
+    </div>
   </div>
 </footer>
-
-<script src="assets/script.js"></script>
+<script>
+(function(){
+  var t=document.querySelector('.nav-toggle'), n=document.getElementById('nav');
+  if(t&&n){t.addEventListener('click',function(){
+    var open=n.classList.toggle('open');
+    t.setAttribute('aria-expanded',open?'true':'false');
+    t.textContent=open?'Close':'Menu';
+  });}
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    els.forEach(function(e){e.classList.add('in');});return;
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -12% 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+<script>
+/* INTERIM enquiry handling — 1 Aug 2026.
+   The permanent destination is undecided (Formspree or WhatsApp; open item 9 in
+   claude/decisions-log.md). Until it is decided, submitting must not silently
+   drop an enquiry, so the form composes the message in the visitor's own mail
+   client. No data reaches a third party, and replacing this with a real POST
+   is a one-function change. */
+(function(){
+  var f=document.getElementById('enquiry'); if(!f) return;
+  var note=document.getElementById('enq-note');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var g=function(id){var el=document.getElementById(id);return el&&el.value?el.value.trim():'';};
+    if(!g('name')||!g('phone')){
+      note.textContent='Please add your name and a phone number so we can come back to you.';
+      return;
+    }
+    var lines=['Name: '+g('name'),'Phone: '+g('phone'),'Email: '+g('email'),
+      'Occasion: '+g('type'),'Preferred date: '+g('date'),'Guest count: '+g('guests'),
+      '',g('message'),'','Sent from the Firefox Sports & Resorts website'];
+    var subject='Enquiry — '+(g('type')||'Firefox Sports & Resorts')+(g('date')?' — '+g('date'):'');
+    note.innerHTML='Opening your email app with the details filled in. If nothing happens, call <a href="tel:+919676716888" style="border-bottom:1px solid var(--line)">+91 96767 16888</a>.';
+    window.location.href='mailto:gm@firefoxsportsandresorts.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));
+  });
+})();
+</script>
 </body>
 </html>

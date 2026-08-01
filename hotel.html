@@ -1,110 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hotel — Firefox Sports &amp; Resorts, Hyderabad</title>
-<meta name="description" content="A 100-room hotel with dorm rooms, a fitness centre, Wi-Fi throughout and 800+ parking at Firefox Sports & Resorts near Moinabad, Hyderabad — stay after a wedding, an offsite or a weekend away.">
-<link rel="stylesheet" href="assets/styles.css">
+<title>Stay — Firefox Sports &amp; Resorts, Moinabad</title>
+<meta name="description" content="100 rooms on a 15-acre estate 20 km from Hyderabad, including dorm rooms for groups, a fitness centre, Wi-Fi throughout and parking for 500. Stay after a wedding, an offsite or a weekend away.">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-latin-300-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/mulish-latin-400-normal.woff2" crossorigin>
+<link rel="stylesheet" href="assets/band.css"><script>document.documentElement.className+=" js";</script>
 </head>
 <body>
-
-<header class="nav" id="nav">
-  <a class="brand" href="index.html" aria-label="Firefox Sports and Resorts — home">
-    <img class="mark" src="assets/img/logo.png" alt="Firefox Sports and Resorts">
-    <span><b>Firefox</b><small>Sports &amp; Resorts</small></span>
-  </a>
-  <nav class="nav-links" aria-label="Primary">
-    <a href="weddings.html">Weddings</a>
-    <a href="corporate.html">Corporate</a>
-    <a href="sports.html">Sports</a>
-    <a href="hotel.html" aria-current="page">Hotel</a>
-    <a href="dayouts.html">Day Outings</a>
-    <a class="btn btn-gold" href="contact.html">Enquire</a>
-  </nav>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Firefox Sports and Resorts — home">
+      <img src="assets/img/logo.png" alt="" width="283" height="211">
+      <span class="wm">Firefox<span>Sports &amp; Resorts</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav">
+      <a href="weddings.html">Weddings</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="estate.html">The Estate</a>
+      <a href="sports.html">Sport</a>
+      <a href="hotel.html" aria-current="page">Stay</a>
+      <a class="btn-enq" href="contact.html">Enquire</a>
+    </nav>
+  </div>
 </header>
+<main id="main">
 
-<section class="phero">
-  <div class="hero-bg"><img src="assets/img/ht-suite.jpg" alt="Spacious guest room with a king bed, sofa and balcony at Firefox"></div>
-  <div class="hero-inner">
-    <p class="crumbs reveal"><a href="index.html">Home</a> &nbsp;/&nbsp; Hotel</p>
-    <h1 class="display-xl reveal" data-d="1">Stay the<br><span class="serif-italic">weekend.</span></h1>
-    <p class="lede reveal" data-d="2">A 100-room hotel on the estate — from king rooms with private balconies to dorm rooms for groups, plus a fitness centre, Wi-Fi throughout and 800+ parking.</p>
+<section class="band hero">
+  <div class="band-img"><img src="assets/img/ht-suite.jpg" alt="A guest room with a king bed, a sofa and a balcony over the gardens" fetchpriority="high" width="1600" height="1068"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow eyebrow--light">Stay &middot; Moinabad</p>
+    <h1>100 rooms. Nobody drives <em>home</em>.</h1>
+    <p>King and twin rooms, and dorm rooms for whole groups.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="contact.html">Check availability</a>
+      <a class="btn btn-ghost" href="tel:+919988425777">+91 99884 25777</a>
+    </div>
   </div>
 </section>
 
-<section class="section skin-ivory">
+<section class="say">
   <div class="wrap">
-    <div class="split">
-      <div class="split-body reveal">
-        <p class="eyebrow">The hotel</p>
-        <h2 class="display-l" style="margin:.6rem 0 1.4rem">Rooms with<br>the estate at the door.</h2>
-        <p class="lede">One hundred rooms in all — marble-floored, with king or twin beds and private balconies over the greenery — and dorm rooms that make it easy to host a whole team or wedding party. Stay after the celebration, extend a corporate offsite, or simply escape the city for a night or two.</p>
-        <p style="margin-top:1.8rem"><a class="btn btn-ink" href="tel:+919988425777">Rooms · +91 99884 25777</a></p>
+    <p class="eyebrow">The hotel</p>
+    <h2>The event ends. Nobody has to <em>leave</em>.</h2>
+    <p>Grandparents upstairs, cousins down the corridor, the whole team on one floor — and breakfast together the next morning.</p>
+  </div>
+</section>
+
+<section class="figures figures--4">
+  <div class="wrap">
+    <ul>
+      <li><div class="n">100</div><div class="l">Rooms</div></li>
+      <li><div class="n">15</div><div class="l">Acres</div></li>
+      <li><div class="n">500+</div><div class="l">Parking</div></li>
+      <li><div class="n">20</div><div class="l">km from Hyderabad</div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="mosaic" aria-label="The rooms">
+  <figure><img src="assets/img/ht-king.jpg" alt="A guest room with a king bed and a private balcony" loading="lazy" width="1600" height="1067"><figcaption><b>King rooms</b><span>Marble floors &middot; private balcony</span></figcaption></figure>
+  <figure><img src="assets/img/ht-twin.jpg" alt="A twin-bed guest room with a marble floor" loading="lazy" width="960" height="1280"><figcaption><b>Twin rooms</b><span>For colleagues and cousins</span></figcaption></figure>
+  <figure><img src="assets/img/ht-balcony.jpg" alt="A guest room opening onto a balcony above the gardens" loading="lazy" width="1600" height="1067"><figcaption><b>Balconies</b><span>Rooms open onto the greenery</span></figcaption></figure>
+</section>
+
+<section class="band feature reveal">
+  <div class="band-img"><img src="assets/img/venue-gardenpath.jpg" alt="A tiled walkway running between avenues of mature trees" loading="lazy" width="1600" height="1035"></div>
+  <div class="wrap feature-inner">
+    <p class="eyebrow eyebrow--light">On site</p>
+    <h2>More than a <em>room</em>.</h2>
+    <p>Fitness centre. Wi-Fi throughout. Parking for 500, so nobody circles. And fifteen acres to walk out into.</p>
+    <a class="btn btn-ghost" href="estate.html">The estate</a>
+  </div>
+</section>
+
+<section class="facts">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">The rooms</p>
+      <h2>Room to suit the <em>stay</em>.</h2>
+      <p>One hundred rooms in all, including dorm rooms that make it easy to house a whole team or wedding party.</p>
+    </div>
+    <ul>
+      <li><b>King &amp; twin rooms</b><span>Marble floors, private balconies</span></li>
+      <li><b>Dorm rooms</b><span>For teams and large families</span></li>
+      <li><b>Bathrooms</b><span>Marble, glass-walled showers</span></li>
+      <li><b>Fitness centre</b><span>On site</span></li>
+      <li><b>Wi-Fi</b><span>Throughout the property</span></li>
+      <li><b>Parking</b><span>500+ cars on site</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <div class="orn"><i></i><b></b><i></i></div>
+    <p>The hall by night, and everyone still here in the morning.</p>
+    <p class="who">Firefox Sports &amp; Resorts &middot; Moinabad</p>
+  </div>
+</section>
+
+<section class="enquire">
+  <div class="wrap">
+    <div>
+      <h2>Book your stay.</h2>
+      <p>Rooms for weekends, weddings and offsites — tell us the dates.</p>
+    </div>
+    <div class="acts">
+      <a class="btn btn-pine" href="contact.html">Check availability</a>
+      <a class="btn btn-dark" href="tel:+919988425777">+91 99884 25777</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand">
+          <img src="assets/img/logo.png" alt="" loading="lazy" width="283" height="211">
+          <span class="wm">Firefox<span>Sports &amp; Resorts</span></span>
+        </div>
+        <p class="tag">15 acres at Moinabad. Weddings, corporate escapes, sport, rooms.</p>
       </div>
-      <div class="split-media arch reveal" data-d="1"><img src="assets/img/ht-king.jpg" alt="Guest room with a king bed and private balcony"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section skin-pine">
-  <div class="wrap">
-    <div class="center" style="margin-bottom:clamp(2rem,4vw,3rem)">
-      <p class="eyebrow reveal">The rooms</p>
-      <h2 class="display-l reveal" data-d="1" style="margin-top:.5rem">Room to suit the stay.</h2>
-    </div>
-    <div class="grid-3">
-      <article class="ocard reveal"><div class="arch arch--sm"><img src="assets/img/ht-twin.jpg" alt="Twin-bed guest room with marble floor"></div><h4>King &amp; twin rooms</h4><p>Marble floors, generous beds and a private balcony — for couples, families and colleagues alike.</p></article>
-      <article class="ocard reveal" data-d="1"><div class="arch arch--sm"><img src="assets/img/ht-balcony.jpg" alt="Guest room opening onto a balcony with garden views"></div><h4>Balcony &amp; views</h4><p>Wake up to the estate — rooms open onto greenery, quiet and light.</p></article>
-      <article class="ocard reveal" data-d="2"><div class="arch arch--sm"><img src="assets/img/ht-bath.jpg" alt="Marble bathroom with a glass-walled shower"></div><h4>Marble bathrooms</h4><p>Glass-walled showers and clean, modern fittings in every room.</p></article>
-    </div>
-    <div class="center reveal" style="margin-top:3rem">
-      <a class="btn btn-ghost btn-lg" href="contact.html">Check availability
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<section class="section skin-ivory">
-  <div class="wrap">
-    <div class="split split--reverse">
-      <div class="split-body reveal">
-        <p class="eyebrow">On site</p>
-        <h2 class="display-m" style="margin:.5rem 0 2rem">More than a room.</h2>
-        <ul class="flist">
-          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 8v8M18 8v8M4 10v4M20 10v4M6 12h12"/></svg></span><div><h5>Fitness centre</h5><p>Keep the routine going during your stay.</p></div></li>
-          <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12.5a11 11 0 0 1 14 0M8 15.5a6.5 6.5 0 0 1 8 0M12 18.5h.01"/></svg></span><div><h5>Wi-Fi throughout</h5><p>Fast, reliable connectivity across the property.</p></div></li>
-          <li style="border-bottom:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 17h16M6 17V9l3-3h6l3 3v8M9 17v-4h6v4"/></svg></span><div><h5>800+ parking</h5><p>Room for the whole guest list — no logistics headache.</p></div></li>
+      <div>
+        <h4>The estate</h4>
+        <ul>
+          <li><a href="weddings.html">Weddings</a></li>
+          <li><a href="corporate.html">Corporate</a></li>
+          <li><a href="estate.html">The Estate</a></li>
+          <li><a href="sports.html">Sport</a></li>
+          <li><a href="hotel.html">Stay</a></li>
         </ul>
       </div>
-      <div class="split-media arch reveal" data-d="1"><img src="assets/img/venue-gardenpath.jpg" alt="Tree-lined garden pathway through the estate"></div>
+      <div>
+        <h4>Speak to us</h4>
+        <ul>
+          <li>Weddings <a href="tel:+919676716888">+91 96767 16888</a></li>
+          <li>Rooms <a href="tel:+919988425777">+91 99884 25777</a></li>
+          <li>General <a href="tel:+919988435777">+91 99884 35777</a></li>
+          <li><a href="mailto:gm@firefoxsportsandresorts.com">gm@firefoxsportsandresorts.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <ul>
+          <li>Sy. No. 127, Surangal Village</li>
+          <li>Moinabad Mandal</li>
+          <li>Hyderabad, Telangana 501504</li>
+          <li>About 20 km from Hyderabad</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="section cta-band skin-ivory-2">
-  <div class="wrap reveal">
-    <p class="crest" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c2 4 5 5 5 9a5 5 0 0 1-10 0c0-4 3-5 5-9Z"/></svg></p>
-    <h2 class="display-l">Book your stay.</h2>
-    <p class="lede" style="margin:1rem auto 2rem;text-align:center">Rooms for weekends, weddings and offsites — check availability with us.</p>
-    <a class="btn btn-ink btn-lg" href="contact.html">Enquire now
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-top">
-      <div><a class="brand" href="index.html"><img class="mark" src="assets/img/logo.png" alt="Firefox Sports and Resorts"><span><b>Firefox</b><small>Sports &amp; Resorts</small></span></a><p class="footer-blurb">A weekend retreat for all seasons and reasons — greenery, sport, celebration and stay, on Hyderabad's edge.</p></div>
-      <div><h6>Occasions</h6><ul><li><a href="weddings.html">Weddings &amp; Events</a></li><li><a href="corporate.html">Corporate Outings</a></li><li><a href="dayouts.html">Day Outings</a></li><li></li></ul></div>
-      <div><h6>The estate</h6><ul><li><a href="sports.html">Sports &amp; Adventure</a></li><li><a href="hotel.html">Hotel</a></li><li><a href="contact.html">Site Visits</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h6>Reach us</h6><ul><li><a href="tel:+919676716888">+91 96767 16888 <span style="color:#8a998f">· Weddings</span></a></li><li><a href="tel:+919988425777">+91 99884 25777 <span style="color:#8a998f">· Rooms</span></a></li><li><a href="mailto:gm@firefoxsportsandresorts.com">gm@firefoxsportsandresorts.com</a></li><li style="color:#a9b8af;font-size:.9rem;margin-top:.4rem">Sy. No. 127, Surangal Village, Moinabad Mandal, Telangana 501504</li></ul></div>
+    <div class="base">
+      <span>&copy; 2026 Firefox Sports &amp; Resorts</span>
+      <span>Weddings &middot; Corporate escapes &middot; Sport &middot; Rooms</span>
     </div>
-    <div class="footer-bottom"><span>&copy; <span id="year">2026</span> Firefox Sports &amp; Resorts. All rights reserved.</span><span>Moinabad &middot; Hyderabad &middot; Telangana</span></div>
   </div>
 </footer>
-
-<script src="assets/script.js"></script>
+<script>
+(function(){
+  var t=document.querySelector('.nav-toggle'), n=document.getElementById('nav');
+  if(t&&n){t.addEventListener('click',function(){
+    var open=n.classList.toggle('open');
+    t.setAttribute('aria-expanded',open?'true':'false');
+    t.textContent=open?'Close':'Menu';
+  });}
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    els.forEach(function(e){e.classList.add('in');});return;
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -12% 0px'});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
 </body>
 </html>

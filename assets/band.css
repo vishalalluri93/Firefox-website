@@ -5,6 +5,20 @@
    ===================================================================== */
 
 
+/* Self-hosted fonts (no external CDN dependency) */
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300;font-display:swap;src:url('fonts/cormorant-garamond-latin-300-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/cormorant-garamond-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/cormorant-garamond-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/cormorant-garamond-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300;font-display:swap;src:url('fonts/cormorant-garamond-latin-300-italic.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-display:swap;src:url('fonts/cormorant-garamond-latin-400-italic.woff2') format('woff2')}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:300;font-display:swap;src:url('fonts/mulish-latin-300-normal.woff2') format('woff2')}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/mulish-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/mulish-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/mulish-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/mulish-latin-700-normal.woff2') format('woff2')}
+
+
 :root{
   /* Theme: Slate & Champagne. Swap this block to change the whole site. */
   --pine:#23384F; --pine-deep:#182838; --forest:#324B66;
@@ -121,8 +135,11 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
 .feature{position:relative;min-height:clamp(24rem,52vh,34rem);display:flex;align-items:flex-end;
   overflow:hidden}
 .feature .band-img{position:absolute;inset:0}
-.feature .band-img::after{background:linear-gradient(180deg,rgba(var(--veil),.22),rgba(var(--veil),.52) 40%,rgba(var(--veil),.93))}
-.feature.ember .band-img::after{background:linear-gradient(180deg,rgba(var(--veil-warm),.20),rgba(var(--veil-warm),.54) 40%,rgba(var(--veil-warm),.93))}
+/* Scrim ramps are steep through the middle, not linear to the foot: the text block
+   starts around 55% of the band, so a gradient that only goes heavy at 100% leaves
+   bright patches behind the heading. Measured by p90 luminance, not by eye. */
+.feature .band-img::after{background:linear-gradient(180deg,rgba(var(--veil),.20) 0%,rgba(var(--veil),.50) 26%,rgba(var(--veil),.82) 54%,rgba(var(--veil),.96) 100%)}
+.feature.ember .band-img::after{background:linear-gradient(180deg,rgba(var(--veil-warm),.18) 0%,rgba(var(--veil-warm),.50) 26%,rgba(var(--veil-warm),.82) 54%,rgba(var(--veil-warm),.96) 100%)}
 .feature-inner{position:relative;z-index:2;width:100%;text-align:center;color:var(--ivory);padding-block:clamp(2.5rem,5vw,3.5rem);
   max-width:var(--maxw);text-shadow:0 1px 18px rgba(var(--veil),.55)}
 .feature-inner>*{max-width:46rem;margin-inline:auto}
@@ -136,8 +153,8 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
 .spaces{background:var(--ivory)}
 .space{position:relative;height:clamp(15rem,32vh,21rem);overflow:hidden;border-bottom:1px solid rgba(247,244,236,.14)}
 .space .band-img{position:absolute;inset:0}
-.space .band-img::after{background:linear-gradient(180deg,rgba(var(--veil),.20),rgba(var(--veil),.46) 45%,rgba(var(--veil),.92))}
-.space.right .band-img::after{background:linear-gradient(180deg,rgba(var(--veil),.20),rgba(var(--veil),.46) 45%,rgba(var(--veil),.92))}
+.space .band-img::after,
+.space.right .band-img::after{background:linear-gradient(180deg,rgba(var(--veil),.18) 0%,rgba(var(--veil),.44) 28%,rgba(var(--veil),.78) 56%,rgba(var(--veil),.96) 100%)}
 .space-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;
   justify-content:flex-end;align-items:center;text-align:center;color:var(--ivory);text-shadow:0 1px 16px rgba(var(--veil),.6);padding-block:clamp(2.5rem,5vw,3.5rem)}
 .space.right .space-inner{align-items:center;text-align:center}
@@ -167,7 +184,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
 /* location */
 .where{position:relative;min-height:clamp(22rem,46vh,30rem);display:flex;align-items:flex-end;overflow:hidden}
 .where .band-img{position:absolute;inset:0}
-.where .band-img::after{background:linear-gradient(180deg,rgba(var(--veil),.26),rgba(var(--veil),.56) 40%,rgba(var(--veil),.94))}
+.where .band-img::after{background:linear-gradient(180deg,rgba(var(--veil),.24) 0%,rgba(var(--veil),.50) 30%,rgba(var(--veil),.78) 56%,rgba(var(--veil),.96) 100%)}
 .where-inner{position:relative;z-index:2;width:100%;text-align:center;color:var(--ivory);padding-block:clamp(3.25rem,6vw,4.5rem);max-width:var(--maxw)}
 .where-inner>*{max-width:34rem;margin-inline:auto;text-align:center}
 .where h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:300;margin:.9rem auto 1rem}
@@ -221,11 +238,93 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
   .hero{height:clamp(20rem,58vh,26rem)}
   .space{height:14rem}
   .space.right .space-inner{align-items:center;text-align:center}
-  .space.right .band-img::after{background:linear-gradient(180deg,rgba(var(--veil),.20),rgba(var(--veil),.46) 45%,rgba(var(--veil),.92))}
+  .space.right .band-img::after{background:linear-gradient(180deg,rgba(var(--veil),.18) 0%,rgba(var(--veil),.44) 28%,rgba(var(--veil),.78) 56%,rgba(var(--veil),.96) 100%)}
   .enquire .wrap{flex-direction:column;align-items:flex-start}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
   *{transition-duration:.01ms!important}
+}
+
+/* =====================================================================
+   Added 1 Aug 2026 for the sports, stay, estate and contact pages.
+   Same rules as the rest of the system: no card, no panel, no radius,
+   no shadow. Separation comes from grounds and hairlines only.
+   ===================================================================== */
+
+/* figure grids at other counts */
+.figures--4 ul{grid-template-columns:repeat(4,1fr)}
+.figures--3 ul{grid-template-columns:repeat(3,1fr)}
+
+/* mosaic — a run of photographs, each with its own bottom-set caption.
+   Used where a page needs to show several things at once without cards. */
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--pine-deep)}
+.mosaic figure{position:relative;margin:0;min-height:clamp(13rem,22vw,17rem);overflow:hidden;
+  display:flex;align-items:flex-end}
+.mosaic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mosaic figure::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(var(--veil),.16) 0%,rgba(var(--veil),.46) 30%,rgba(var(--veil),.80) 58%,rgba(var(--veil),.96) 100%)}
+.mosaic figcaption{position:relative;z-index:2;width:100%;text-align:center;color:var(--ivory);
+  padding:0 1.25rem clamp(1.5rem,3vw,2.25rem);text-shadow:0 1px 16px rgba(var(--veil),.6)}
+.mosaic figcaption b{display:block;font-family:var(--display);font-weight:300;
+  font-size:clamp(1.25rem,2.1vw,1.7rem);line-height:1.1}
+.mosaic figcaption span{display:block;font-size:.62rem;font-weight:700;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--gold-soft);margin-top:.55rem}
+
+/* list of plain facts on a quiet ground — no icons, no boxes */
+.facts{background:var(--ivory-2);padding-block:clamp(3rem,6vw,5rem)}
+.facts .head{text-align:center;margin-bottom:clamp(2rem,4vw,3rem)}
+.facts h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:300;margin:1rem auto .9rem;max-width:22ch}
+.facts h2 em{font-style:italic;color:var(--gold-deep)}
+.facts .head p{font-size:clamp(1rem,1.35vw,1.15rem);font-weight:300;color:var(--on-light);
+  max-width:56ch;margin-inline:auto}
+.facts ul{display:grid;grid-template-columns:repeat(2,1fr);gap:0 clamp(2rem,5vw,4.5rem)}
+.facts li{display:flex;justify-content:space-between;align-items:baseline;gap:1.5rem;
+  padding:1.05rem 0;border-bottom:1px solid var(--line)}
+.facts li b{font-family:var(--display);font-weight:400;font-size:clamp(1.1rem,1.7vw,1.35rem);
+  color:var(--on-light-strong)}
+.facts li span{font-size:.95rem;font-weight:300;color:var(--on-light);text-align:right}
+
+/* contact — form and departments, side by side on one ivory ground */
+.contact{background:var(--ivory);padding-block:clamp(3.5rem,7vw,5.5rem)}
+.contact .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(2.5rem,5vw,4.5rem)}
+.contact h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:300;margin:1rem 0 1.6rem}
+.contact h2 em{font-style:italic;color:var(--gold-deep)}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.form .field{margin-bottom:1.25rem}
+.form label{display:block;font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold-deep);margin-bottom:.5rem}
+.form input,.form select,.form textarea{width:100%;font-family:var(--body);font-size:.98rem;
+  font-weight:300;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);
+  padding:.6rem 0;border-radius:0;-webkit-appearance:none;appearance:none}
+.form select{background-image:linear-gradient(45deg,transparent 50%,var(--gold-deep) 50%),
+  linear-gradient(135deg,var(--gold-deep) 50%,transparent 50%);
+  background-position:calc(100% - 12px) 55%,calc(100% - 7px) 55%;
+  background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:1.75rem}
+.form textarea{min-height:7rem;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{outline:0;border-bottom-color:var(--gold-deep)}
+.form input:focus-visible,.form select:focus-visible,.form textarea:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.form button{border:0;cursor:pointer;margin-top:.75rem}
+.form .note{margin-top:1.1rem;font-size:.88rem;font-weight:300;color:var(--on-light)}
+
+.desks{border-top:1px solid var(--line)}
+.desks .desk{padding:1.4rem 0;border-bottom:1px solid var(--line)}
+.desks .desk p.eyebrow{font-size:.62rem;letter-spacing:.24em}
+.desks .desk a,.desks .desk .val{display:block;font-family:var(--display);font-weight:300;
+  font-size:clamp(1.15rem,1.9vw,1.45rem);color:var(--on-light-strong);margin-top:.5rem;line-height:1.45}
+.desks .desk a:hover{color:var(--gold-deep)}
+.desks .desk .val{font-size:clamp(1rem,1.5vw,1.15rem)}
+
+@media(max-width:900px){
+  .mosaic{grid-template-columns:repeat(2,1fr)}
+  .facts ul{grid-template-columns:1fr}
+  .contact .grid{grid-template-columns:1fr}
+  .figures--4 ul{grid-template-columns:repeat(2,1fr)}
+  .figures--3 ul{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:560px){
+  .mosaic{grid-template-columns:1fr}
+  .form .row{grid-template-columns:1fr;gap:0}
+  .figures--3 ul{grid-template-columns:repeat(2,1fr)}
 }

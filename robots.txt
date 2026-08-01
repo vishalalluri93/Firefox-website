@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Sitemap: added by tools/seo-origin.py once the canonical domain is settled.
