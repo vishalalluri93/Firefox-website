@@ -127,7 +127,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
   max-width:var(--maxw);text-shadow:0 1px 18px rgba(var(--veil),.55)}
 .feature-inner>*{max-width:46rem;margin-inline:auto}
 .feature-inner .eyebrow,.where-inner .eyebrow{text-shadow:0 1px 3px rgba(var(--veil),.95),0 2px 14px rgba(var(--veil),.9)}
-.feature h2{font-size:clamp(2rem,4.2vw,3.4rem);font-weight:300;margin:.9rem 0 .8rem}
+.feature h2{font-size:clamp(2rem,4.2vw,3.4rem);font-weight:300;margin:.9rem auto .8rem}
 .feature h2 em{font-style:italic;color:var(--gold-soft)}
 .feature p{font-size:clamp(.95rem,1.3vw,1.1rem);font-weight:300;color:var(--on-dark);max-width:46ch;margin-bottom:1.5rem}
 
@@ -169,7 +169,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
 .where .band-img::after{background:linear-gradient(180deg,rgba(var(--veil),.26),rgba(var(--veil),.56) 40%,rgba(var(--veil),.94))}
 .where-inner{position:relative;z-index:2;width:100%;text-align:center;color:var(--ivory);padding-block:clamp(3.25rem,6vw,4.5rem);max-width:var(--maxw)}
 .where-inner>*{max-width:34rem;margin-inline:auto;text-align:center}
-.where h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:300;margin:.9rem 0 1rem}
+.where h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:300;margin:.9rem auto 1rem}
 .where dl{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.4rem;font-size:.95rem;font-weight:300;
   color:var(--on-dark);margin-bottom:1.6rem}
 .where dt{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft);
