@@ -130,6 +130,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
 .feature h2{font-size:clamp(2rem,4.2vw,3.4rem);font-weight:300;margin:.9rem auto .8rem}
 .feature h2 em{font-style:italic;color:var(--gold-soft)}
 .feature p{font-size:clamp(.95rem,1.3vw,1.1rem);font-weight:300;color:var(--on-dark);max-width:46ch;margin-bottom:1.5rem}
+.feature-inner h2+.btn{margin-top:.7rem}
 
 /* space bands — shorter, name sits on the image */
 .spaces{background:var(--ivory)}
