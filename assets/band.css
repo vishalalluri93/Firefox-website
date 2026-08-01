@@ -43,7 +43,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad-x)}
-.eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-deep)}
+.eyebrow{font-size:.88rem;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-deep)}
 .eyebrow--light{color:var(--gold-soft)}
 .eyebrow--ember{color:var(--ember)}
 .serif-italic{font-style:italic}
@@ -56,8 +56,8 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
 .brand{display:flex;align-items:center;gap:.7rem}
 .brand img{height:40px;width:auto}
 .brand .wm{font-family:var(--display);font-size:1.4rem;line-height:1}
-.brand .wm span{display:block;font-family:var(--body);font-size:.44rem;font-weight:700;
-  letter-spacing:.36em;color:var(--gold-soft);margin-top:.18rem}
+.brand .wm span{display:block;font-family:var(--body);font-size:.62rem;font-weight:700;
+  letter-spacing:.26em;color:var(--gold-soft);margin-top:.18rem}
 .nav{display:flex;align-items:center;gap:1.6rem}
 .nav a{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-dim);
   transition:color .25s var(--ease)}
@@ -84,7 +84,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
 .hero h1{font-size:clamp(2.3rem,5.4vw,4.2rem);font-weight:300;margin:1rem auto .85rem;max-width:18ch}
 .hero h1 em{font-style:italic;color:var(--gold-soft)}
 .hero p{font-size:clamp(.92rem,1.25vw,1.05rem);font-weight:300;color:var(--on-dark);max-width:46ch;margin-inline:auto}
-.hero-inner .eyebrow{font-size:.62rem;letter-spacing:.24em;text-shadow:0 1px 3px rgba(var(--veil),.95),0 2px 14px rgba(var(--veil),.9)}
+.hero-inner .eyebrow{font-size:1rem;letter-spacing:.18em;text-shadow:0 1px 3px rgba(var(--veil),.95),0 2px 14px rgba(var(--veil),.9)}
 .hero-cta{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:1.35rem}
 
 .btn{display:inline-block;font-family:var(--body);font-size:.68rem;font-weight:700;letter-spacing:.24em;
@@ -101,7 +101,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
 .btn-dark:hover{background:var(--pine-deep);color:var(--ivory)}
 
 /* statement bands */
-.say{background:var(--ivory);text-align:center;padding-block:clamp(3.5rem,7vw,6rem)}
+.say{background:var(--ivory);text-align:left;padding-block:clamp(3.5rem,7vw,6rem)}
 .say h2{font-size:clamp(1.9rem,3.6vw,3rem);font-weight:300;margin:1rem auto .9rem;max-width:22ch}
 .say h2 em{font-style:italic;color:var(--gold-deep)}
 .say p{font-size:clamp(1rem,1.35vw,1.15rem);font-weight:300;color:var(--on-light);max-width:56ch;margin-inline:auto}
@@ -111,10 +111,10 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
 
 /* numbers */
 .figures{background:var(--pine);color:var(--ivory);padding-block:clamp(2.5rem,5vw,3.75rem)}
-.figures ul{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;text-align:center}
+.figures ul{display:grid;grid-template-columns:repeat(6,1fr);gap:1.5rem;text-align:center}
 .figures .n{font-family:var(--display);font-size:clamp(2rem,3.6vw,3rem);font-weight:300;line-height:1;
   color:var(--gold-soft)}
-.figures .l{font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--mist);
+.figures .l{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--mist);
   margin-top:.6rem}
 
 /* feature bands (weddings / corporate / sport / stay) */
