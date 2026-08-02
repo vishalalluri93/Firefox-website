@@ -328,3 +328,66 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
   .form .row{grid-template-columns:1fr;gap:0}
   .figures--3 ul{grid-template-columns:repeat(2,1fr)}
 }
+
+/* =====================================================================
+   Homepage-only overrides — 2 Aug 2026, Vishal's brief.
+   Scoped to `body.home` so the other six pages are unchanged until he has
+   seen these on the homepage. To promote them site-wide, delete `.home `
+   from each selector below and fold the values into the base rules.
+   ===================================================================== */
+
+/* Display type on the photographic banners, ~17% smaller at desktop.
+   Only the clamp MAXIMUM and the vw term move; the minimums are untouched,
+   and at 390px every one of these still resolves to its minimum — so the
+   phone renders identically to before. Verified by measurement. */
+.home .hero h1   {font-size:clamp(2.3rem,4.5vw,3.5rem)}
+.home .feature h2{font-size:clamp(2rem,3.5vw,2.8rem)}
+.home .space h3  {font-size:clamp(1.6rem,2.5vw,2rem)}
+.home .where h2  {font-size:clamp(1.9rem,3vw,2.4rem)}
+/* Eyebrow and body sizes are the system defaults again — the 2 Aug reduction
+   to the estate scale was reverted on Vishal's instruction. */
+
+/* Weddings and corporate banners a little taller. */
+.home #weddings,
+.home #corporate{min-height:clamp(27rem,58vh,38rem)}
+
+/* Feature banners in pairs: weddings beside corporate, sport beside stay.
+   Same reasoning as the estate tiles — a half-width frame keeps the
+   photograph readable instead of letterboxing it. */
+.home .pair{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--pine-deep)}
+.home .pair .wrap{padding-inline:clamp(1rem,2.5vw,2.25rem)}
+.home .pair .feature-inner>*{max-width:34rem}
+
+/* Type on the paired banners sits between the hero and the estate tiles.
+   Desktop: heading 56px (hero) -> 40px here -> 32px (estate);
+            eyebrow 16px -> 12.5px -> 9.9px;  body 16.8px -> 16px -> 15.2px. */
+.home .pair .feature h2{font-size:clamp(1.8rem,3vw,2.5rem)}
+.home .pair .feature-inner .eyebrow{font-size:.78rem;letter-spacing:.28em}
+.home .pair .feature p{font-size:1rem}
+@media(max-width:900px){
+  .home .pair{grid-template-columns:1fr}
+}
+
+/* The 25% bottom-padding reduction was reverted on Vishal's instruction, 2 Aug. */
+
+/* Getting here: label and value on one centred line, five spaces apart,
+   instead of a two-column grid. */
+.home .where dl{display:block;text-align:center;margin-bottom:1.6rem}
+.home .where dt{display:inline;padding-top:0}
+.home .where dt::after{content:"\00a0\00a0\00a0\00a0\00a0"}
+.home .where dd{display:inline}
+.home .where dd::after{content:"\A";white-space:pre}
+.home .where dd:last-of-type::after{content:none}
+
+/* Estate bands two to a row on the homepage. Full-bleed rows made every
+   photograph a 7:1 letterbox, which crops out whatever the picture is of.
+   Half-width tiles land near 2:1, so the subject survives the crop.
+   Seven is odd, so the last tile takes the full row. */
+.home .spaces{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--pine-deep)}
+.home .space{height:clamp(17rem,27vw,25rem);border-bottom:0}
+.home .space:last-child{grid-column:1 / -1;height:clamp(15rem,22vw,20rem)}
+.home .spaces .wrap{padding-inline:clamp(1rem,2.5vw,2.25rem)}
+@media(max-width:900px){
+  .home .spaces{grid-template-columns:1fr}
+  .home .space,.home .space:last-child{grid-column:auto;height:15rem}
+}

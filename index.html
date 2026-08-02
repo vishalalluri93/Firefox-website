@@ -29,7 +29,7 @@
 }
 </script>
 </head>
-<body>
+<body class="home">
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-head">
@@ -92,18 +92,17 @@
     </div>
   </section>
 
-  <!-- 4 · weddings -->
-  <section class="band feature showcase reveal" id="weddings">
-    <div class="shots">
-      <figure><img src="assets/img/wed-haldi-mandap.jpg" alt="A yellow mandap set up outdoors beneath the trees" loading="lazy" width="960" height="1280"></figure>
-      <figure><img src="assets/img/wed-mandap.jpg" alt="A floral aisle leading to the mandap inside the main hall" loading="lazy" width="1280" height="960"></figure>
-      <figure><img src="assets/img/wed-canopy.jpg" alt="An outdoor stage beneath a canopy of fairy lights" loading="lazy" width="1200" height="1600"></figure>
-      <figure><img src="assets/img/hero.jpg" alt="A draped hall set with a decorated stage and rows of seating" loading="lazy" width="1600" height="1200"></figure>
+  <!-- 4 · weddings + corporate, side by side -->
+  <div class="pair">
+
+  <section class="band feature reveal" id="weddings">
+    <div class="band-img">
+      <img src="assets/img/hero.jpg" alt="A draped hall set with a decorated stage and rows of seating" loading="lazy" width="1600" height="1200">
     </div>
     <div class="wrap feature-inner">
-      <p class="eyebrow eyebrow--light">Weddings</p>
+      <p class="eyebrow eyebrow--light">Wedding and events</p>
       <h2>Grand or <em>intimate</em>. 50 or a thousand.</h2>
-      <a class="btn btn-gold" href="weddings.html">Wedding venues</a>
+      <a class="btn btn-gold" href="weddings.html">Weddings</a>
     </div>
   </section>
 
@@ -119,16 +118,20 @@
     </div>
   </section>
 
+  </div>
+
   <!-- 6 · what makes it different -->
   <section class="say">
     <div class="wrap">
       <p class="eyebrow">What makes us different</p>
       <h2>Most venues stop at the <em>hall</em>.</h2>
-      <p>We also have 50+ courts and 100 rooms. The hours between functions are covered.</p>
+      <p>The hours between functions are what the guests look forward to. Sports, a pool and rooms.</p>
     </div>
   </section>
 
-  <!-- 7 · sport -->
+  <!-- 7 · sport + stay, side by side -->
+  <div class="pair">
+
   <section class="band feature reveal" id="sport">
     <div class="band-img">
       <img src="assets/img/sp-tennis.jpg" alt="The indoor tennis courts under the sports block roof" loading="lazy" width="1600" height="1204">
@@ -136,7 +139,7 @@
     <div class="wrap feature-inner">
       <p class="eyebrow eyebrow--light">Sport</p>
       <h2>50+ courts and tables. All <em>indoors</em>.</h2>
-      <p>15 badminton. 20 table tennis. 4 tennis. 4 turf. 3 pickleball. 2 beach volleyball. 1 basketball.</p>
+      <p>Badminton. Pickleball. Cricket. Tennis. Football. Table tennis. Basketball. Volleyball.</p>
       <a class="btn btn-ghost" href="sports.html">Sports block</a>
     </div>
   </section>
@@ -149,17 +152,19 @@
     <div class="wrap feature-inner">
       <p class="eyebrow eyebrow--light">Stay</p>
       <h2>100 rooms. Nobody drives <em>home</em>.</h2>
-      <p>Rooms and dorms. Fitness centre. Wi-Fi throughout.</p>
+      <p>Rooms and dorms. Wi-Fi throughout.</p>
       <a class="btn btn-ghost" href="hotel.html">Rooms</a>
     </div>
   </section>
+
+  </div>
 
   <!-- 9 · the spaces -->
   <section class="say say--alt" id="spaces">
     <div class="wrap">
       <p class="eyebrow">The estate</p>
-      <h2>Named places, not numbered rooms.</h2>
-      <p>Convention centre, gardens, amphitheatre, pool, sports block, hotel. Take one or take all.</p>
+      <h2>So many venues, it&rsquo;s hard to keep <em>track</em>.</h2>
+      <p>Large and small halls, lawns, amphitheatre, banquet gardens, pool, pavilion.</p>
     </div>
   </section>
 
@@ -169,21 +174,32 @@
 
     <article class="band space">
       <div class="band-img">
-        <img src="assets/img/wed-mandaphall.jpg" alt="The main hall seated for several hundred guests, facing the stage" loading="lazy" width="1280" height="960">
+        <img src="assets/img/m-hall-grand.jpg" alt="The main hall, set with round tables beneath a lit ceiling" loading="lazy" width="1600" height="1067">
       </div>
       <div class="wrap space-inner">
-        <h3>The Convention Centre</h3>
-        <p class="meta">20+ venues &middot; 50 to 1000</p>
-        <p class="desc">Lobby and lawns attached.</p>
+        <h3>Main Hall</h3>
+        <p class="meta">Indoor &middot; receptions and conferences</p>
+        <p class="desc">Dressed for dinners and stage functions.</p>
       </div>
     </article>
 
-    <article class="band space right">
+    <article class="band space">
       <div class="band-img">
-        <img src="assets/img/wed-haldi-lawn.jpg" alt="The front lawns dressed in marigold for a haldi" loading="lazy" width="1599" height="899">
+        <img src="assets/img/m-hall-round.jpg" alt="A warmly lit hall laid with round tables for a smaller function" loading="lazy" width="1600" height="1067">
       </div>
       <div class="wrap space-inner">
-        <h3>The Front Lawns</h3>
+        <h3>Cellar Hall</h3>
+        <p class="meta">Indoor &middot; smaller functions</p>
+        <p class="desc">Lower, warmer, more intimate.</p>
+      </div>
+    </article>
+
+    <article class="band space">
+      <div class="band-img">
+        <img src="assets/img/wed-haldi-lawn.jpg" alt="The lawns dressed in marigold for a haldi" loading="lazy" width="1599" height="899">
+      </div>
+      <div class="wrap space-inner">
+        <h3>The Lawns</h3>
         <p class="meta">Open air &middot; ceremonies</p>
         <p class="desc">Room for the whole family.</p>
       </div>
@@ -200,7 +216,7 @@
       </div>
     </article>
 
-    <article class="band space right">
+    <article class="band space">
       <div class="band-img">
         <img src="assets/img/venue-gardenpath.jpg" alt="A tiled walkway running between avenues of mature trees" loading="lazy" width="1600" height="1035">
       </div>
@@ -213,12 +229,23 @@
 
     <article class="band space">
       <div class="band-img">
-        <img src="assets/img/venue-pool.jpg" alt="The outdoor pool and its white pavilion beneath the trees" loading="lazy" width="1600" height="1247">
+        <img src="assets/img/venue-pool.jpg" alt="The outdoor pool beneath the trees" loading="lazy" width="1600" height="1247">
       </div>
       <div class="wrap space-inner">
-        <h3>The Pool &amp; Pavilion</h3>
-        <p class="meta">Outdoor &middot; evening dinners</p>
+        <h3>The Pool</h3>
+        <p class="meta">Open air &middot; evening dinners</p>
         <p class="desc">The best spot after dark.</p>
+      </div>
+    </article>
+
+    <article class="band space">
+      <div class="band-img">
+        <img src="assets/img/venue-pavilion.jpg" alt="The garden pavilion and its swings beside an open lawn" loading="lazy" width="1600" height="1059">
+      </div>
+      <div class="wrap space-inner">
+        <h3>The Pavilion</h3>
+        <p class="meta">Open air &middot; shaded</p>
+        <p class="desc">Beside the gardens.</p>
       </div>
     </article>
 
@@ -228,7 +255,7 @@
   <section class="quote">
     <div class="wrap">
       <div class="orn"><i></i><b></b><i></i></div>
-      <p>Built by sportspeople. Planted as a garden. Kept for occasions.</p>
+      <p>Built by sportspeople. Planted by enthusiasts. Kept for occasions.</p>
       <p class="who">Firefox Sports &amp; Resorts &middot; Moinabad</p>
     </div>
   </section>
