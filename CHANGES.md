@@ -29,6 +29,47 @@ assets/img/       Photos + logo.png
 - **Mobile menu bug fixed** — the scrolled header's backdrop blur was trapping the slide-out
   menu inside the header bar. Blur moved to a pseudo-element; menu now fills the screen.
 
+## 3 August 2026 — homepage, second pass
+
+Eight changes, all scoped to `body.home`, so the other six pages are untouched.
+Two files: `index.html` and `assets/band.css`.
+
+- The "Moinabad · 20 km from Hyderabad" line drops from 16px to 12.5px, matching
+  the paired-banner eyebrows, and now fits on one line at desktop (it wrapped to
+  two). A bold weight was tried and reverted.
+- Every button on the homepage is outline-only — same border, padding and 50px
+  height across all ten. `btn-gold` and `btn-pine` were solid fills.
+- Removed the "One address" eyebrow: it restated the heading directly beneath it.
+- Removed the four paired-banner titles — "Wedding and events", "Corporate
+  escapes", "Sport", "Stay". The headings already carry the meaning.
+- The between-functions line is reworded to "our guests", folded into the
+  heading above it, and "Sports, a pool and rooms." is deleted.
+- The scrim on the four paired banners is lightened so the photographs read:
+  top of band 10% veil instead of 20%, midpoint moved from 26% to 34% of height.
+
+Measured with the glyphs hidden, 90th percentile, at 1440px and 390px:
+
+| band      | before | after | contrast, ivory text |
+|-----------|--------|-------|----------------------|
+| weddings  | 104    |  82   | 5.1 -> 7.1 : 1       |
+| corporate |  93    |  76   | 6.0 -> 7.8 : 1       |
+| sport     |  88    |  75   | 6.6 -> 7.9 : 1       |
+| stay      | 135    | 108   | 3.3 -> 4.8 : 1       |
+
+The limit is the Stay band — `ht-suite.jpg` is a bright room whose lower half
+sits where the body copy goes. This is the lightest of four gradients tested
+that still clears WCAG AA (4.5:1) for the 16px copy; one step lighter measures
+3.9:1 and fails. Replacing that photograph would let all four go lighter.
+
+Verified: 8 pages x 2 viewports x JS on and off = 32 renders. Zero horizontal
+overflow, zero console errors, zero page-originated 4xx, every image decodes,
+nothing left invisible, zero rounded corners.
+
+Noted, not fixed: the site has no favicon. And the eyebrows are inconsistent in
+weight site-wide — `.hero p`, `.say p` and `.feature p` each set 300 and beat
+`.eyebrow`'s 700 on specificity, while `.where` has no `p` rule and renders at
+700. Evening that out is a theme-wide change.
+
 ## IMPORTANT if you're updating an existing GitHub repo
 Uploading files does **not** delete old ones. You must manually delete these two, or they'll
 remain live as orphaned pages:

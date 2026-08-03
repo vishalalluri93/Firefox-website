@@ -391,3 +391,44 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
   .home .spaces{grid-template-columns:1fr}
   .home .space,.home .space:last-child{grid-column:auto;height:15rem}
 }
+
+/* =====================================================================
+   Homepage-only overrides — 3 Aug 2026, Vishal's brief.
+   Same `body.home` scoping rule as the block above.
+   ===================================================================== */
+
+/* 1 · The Moinabad line drops from 16px to the paired-banner eyebrow size.
+   No weight is set here, so it resolves to 300 — NOT the 700 that `.eyebrow`
+   declares, because `.hero p` sets 300 and beats it on specificity. That is
+   also the weight the paired-banner eyebrows rendered at, which is what makes
+   this line match them. An 800 override was tried on 3 Aug and reverted the
+   same day: "it's too much". Site-wide the eyebrows are inconsistent for the
+   same reason — `.hero p`, `.say p` and `.feature p` all win over `.eyebrow`,
+   while `.where` has no `p` rule and so renders at 700. Flagged, not fixed:
+   evening it out is a theme-wide change and the theme is settled. */
+/*    The 16px version was wrapping to two lines inside the shared
+      hero max-width; at the smaller size it fits on one, so the cap is
+      lifted here. Still wraps naturally on a phone. */
+.home .hero-inner .eyebrow{font-size:.78rem;letter-spacing:.28em;max-width:none}
+
+/* 2 · One button format everywhere on the homepage: outline only.
+   btn-ghost and btn-dark were already outlines; btn-gold and btn-pine were
+   solid fills, so they now match. Borders were already on the ghost buttons,
+   so making every button bordered also makes them all the same height. */
+.home .btn{background:transparent;border:1px solid currentColor}
+.home .btn-gold{color:var(--gold-soft);border-color:var(--gold)}
+.home .btn-gold:hover{background:var(--gold);color:var(--pine)}
+.home .btn-pine{color:var(--pine-deep);border-color:var(--pine-deep)}
+.home .btn-pine:hover{background:var(--pine-deep);color:var(--ivory)}
+
+/* 3 · Lighter scrim on the four paired banners so the photograph reads.
+   Bottom-weighted per the 1 Aug rule — the copy is bottom-set, so the
+   gradient still lands its weight under the text and opens up the top,
+   which is the part of the picture you actually look at.
+   Tuned by measurement, not by eye: see the p90 figures in the handover. */
+.home .pair .feature .band-img::after{
+  background:linear-gradient(180deg,
+    rgba(var(--veil),.10) 0%,
+    rgba(var(--veil),.30) 34%,
+    rgba(var(--veil),.72) 66%,
+    rgba(var(--veil),.95) 100%)}
