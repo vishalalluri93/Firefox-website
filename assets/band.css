@@ -432,3 +432,73 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
     rgba(var(--veil),.30) 34%,
     rgba(var(--veil),.72) 66%,
     rgba(var(--veil),.95) 100%)}
+
+/* ── Photo revision, Aug 2026 ────────────────────────────────────────────
+   Taller estate tiles, a two-per-row settings layout, an image-panning
+   helper, and the deep-dive gallery. Appended so the theme block above
+   remains the single place a colour change is made. */
+
+/* 1 · taller tiles — the old height was clipping the photographs */
+.home .space{height:clamp(20rem,33vw,30rem)}
+.home .space:last-child{height:clamp(17rem,25vw,23rem)}
+
+/* 2 · pan a photograph down inside its frame without touching the file */
+.pan-down>img{object-position:50% 72%}
+
+/* 3 · two settings per row (weddings) */
+.spaces--two{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--ivory)}
+.spaces--two .space{height:clamp(17rem,26vw,24rem);border-bottom:none}
+
+/* 4 · gallery affordance on a tile */
+.has-gal{cursor:pointer}
+.has-gal:focus-visible{outline:2px solid var(--gold);outline-offset:-4px}
+.has-gal .band-img>img{transition:transform .6s var(--ease)}
+.has-gal:hover .band-img>img{transform:scale(1.03)}
+.gal-badge{position:absolute;z-index:3;top:1rem;right:1rem;
+  font-family:var(--body);font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ivory);background:rgba(var(--veil),.55);border:1px solid var(--line);
+  padding:.35rem .6rem;border-radius:2px;backdrop-filter:blur(2px)}
+
+/* 5 · the lightbox */
+.gal-lock,.gal-lock body{overflow:hidden}
+.gal{position:fixed;inset:0;z-index:120;display:none;
+  background:rgba(12,18,26,.94);
+  align-items:center;justify-content:center;padding:clamp(1rem,4vw,3rem)}
+.gal.open{display:flex}
+.gal-fig{margin:0;max-width:min(96vw,1400px);max-height:86vh;display:flex;flex-direction:column;align-items:center;gap:.9rem}
+.gal-fig img{max-width:100%;max-height:78vh;object-fit:contain;
+  border:1px solid var(--line);background:rgba(var(--veil),.5)}
+.gal-fig figcaption{font-family:var(--body);font-size:.85rem;font-weight:300;color:var(--on-dark-dim);
+  text-align:center;max-width:60ch}
+.gal-x{position:absolute;top:clamp(.6rem,2vw,1.4rem);right:clamp(.6rem,2vw,1.4rem);
+  width:2.75rem;height:2.75rem;font-size:1.9rem;line-height:1;
+  color:var(--ivory);background:none;border:1px solid var(--line);cursor:pointer}
+.gal-nav{position:absolute;top:50%;transform:translateY(-50%);
+  width:3rem;height:4.5rem;font-size:2.4rem;line-height:1;
+  color:var(--ivory);background:rgba(var(--veil),.42);border:1px solid var(--line);cursor:pointer}
+.gal-prev{left:clamp(.4rem,2vw,1.4rem)}
+.gal-next{right:clamp(.4rem,2vw,1.4rem)}
+.gal-nav:hover,.gal-x:hover{background:rgba(var(--veil),.75);border-color:var(--gold)}
+.gal-nav[hidden]{display:none}
+.gal-count{position:absolute;bottom:clamp(2.6rem,6vw,3.4rem);left:0;right:0;text-align:center;
+  font-family:var(--body);font-size:.62rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold-soft)}
+.gal-dots{position:absolute;bottom:clamp(1rem,3vw,1.6rem);left:0;right:0;
+  display:flex;justify-content:center;gap:.5rem}
+.gal-dot{width:.5rem;height:.5rem;padding:0;border-radius:50%;cursor:pointer;
+  background:none;border:1px solid var(--gold-soft)}
+.gal-dot[aria-selected="true"]{background:var(--gold)}
+
+@media(max-width:900px){
+  .spaces--two{grid-template-columns:1fr}
+  .spaces--two .space{height:clamp(15rem,40vw,20rem)}
+}
+@media(max-width:560px){
+  .home .space{height:18rem}
+  .home .space:last-child{height:16rem}
+  .gal-nav{width:2.4rem;height:3.4rem;font-size:1.8rem}
+  .gal-badge{top:.7rem;right:.7rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .has-gal .band-img>img,.has-gal:hover .band-img>img{transition:none;transform:none}
+}
