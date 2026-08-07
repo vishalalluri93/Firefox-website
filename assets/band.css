@@ -502,3 +502,75 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;letter-s
 @media(prefers-reduced-motion:reduce){
   .has-gal .band-img>img,.has-gal:hover .band-img>img{transition:none;transform:none}
 }
+
+/* ── Corporate page, Aug 2026 ───────────────────────────────────────────
+   Built to the v2.0 strategy: four-asset grid, travel block, nine purpose
+   cards, sport as a cross-cutting ribbon, capacity matrix, FAQ.
+   Uses the existing navy/champagne tokens — no new colours. */
+
+.corp-assets{background:var(--pine);padding-block:clamp(2.5rem,5vw,4rem)}
+.asset-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.asset{background:var(--pine);padding:clamp(1.4rem,2.5vw,2.2rem) clamp(1rem,2vw,1.6rem);text-align:center}
+.asset .n{font-family:var(--display);font-size:clamp(2.4rem,4.5vw,3.6rem);font-weight:300;
+  color:var(--gold-soft);line-height:1;display:block}
+.asset .l{font-size:.62rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold);margin-top:.7rem}
+.asset .s{font-size:.9rem;font-weight:300;color:var(--on-dark);margin-top:.5rem}
+
+.travel{background:var(--ivory-2);padding-block:clamp(2.2rem,4vw,3.2rem)}
+.travel h2{font-family:var(--display);font-size:clamp(1.6rem,2.6vw,2.1rem);font-weight:300;color:var(--ink)}
+.travel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:1.5rem}
+.travel-grid div{border-top:1px solid var(--line);padding-top:.9rem}
+.travel-grid .from{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep)}
+.travel-grid .km{font-family:var(--display);font-size:1.7rem;font-weight:300;color:var(--ink);margin-top:.3rem}
+.travel-grid .note{font-size:.82rem;font-weight:300;color:var(--on-light);margin-top:.2rem}
+
+.purposes{background:var(--ivory);padding-block:clamp(2.5rem,5vw,4rem)}
+.purpose-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-top:1.8rem}
+.purpose{background:var(--ivory);padding:clamp(1.3rem,2.2vw,1.9rem)}
+.purpose h3{font-family:var(--display);font-size:1.55rem;font-weight:400;color:var(--ink);letter-spacing:.02em}
+.purpose .sub{font-size:.86rem;font-weight:300;color:var(--on-light);margin-top:.6rem;line-height:1.55}
+.purpose .sport{display:inline-block;margin-top:.9rem;font-size:.62rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);
+  border-top:1px solid var(--line);padding-top:.6rem}
+
+.ribbon{background:var(--forest);padding-block:clamp(2rem,4vw,3rem);text-align:center}
+.ribbon .eyebrow{color:var(--gold-soft)}
+.ribbon h2{font-family:var(--display);font-size:clamp(1.7rem,3vw,2.5rem);font-weight:300;
+  color:var(--ivory);margin:.7rem auto .8rem;max-width:30ch}
+.ribbon h2 em{font-style:italic;color:var(--gold-soft)}
+.ribbon p{font-size:.98rem;font-weight:300;color:var(--on-dark);max-width:58ch;margin-inline:auto}
+
+.matrix{background:var(--ivory-2);padding-block:clamp(2.5rem,5vw,4rem)}
+.matrix table{width:100%;border-collapse:collapse;margin-top:1.4rem;font-size:.9rem}
+.matrix th,.matrix td{text-align:left;padding:.75rem .8rem;border-bottom:1px solid var(--line)}
+.matrix thead th{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold-deep);border-bottom:1px solid var(--gold-deep)}
+.matrix td{font-weight:300;color:var(--on-light)}
+.matrix td:first-child{font-weight:400;color:var(--ink)}
+.matrix .cap{font-size:.82rem;font-weight:300;color:var(--on-light);margin-top:1rem;font-style:italic}
+
+.faq{background:var(--ivory);padding-block:clamp(2.5rem,5vw,4rem)}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-of-type{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:1rem 0;font-family:var(--display);
+  font-size:1.2rem;font-weight:400;color:var(--ink);display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold-deep);font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{font-size:.93rem;font-weight:300;color:var(--on-light);
+  max-width:70ch;padding-bottom:1.1rem;margin-top:-.2rem}
+
+@media(max-width:900px){
+  .asset-grid{grid-template-columns:repeat(2,1fr)}
+  .travel-grid{grid-template-columns:repeat(2,1fr)}
+  .purpose-grid{grid-template-columns:repeat(2,1fr)}
+  .matrix table{font-size:.82rem}
+  .matrix th,.matrix td{padding:.6rem .5rem}
+}
+@media(max-width:560px){
+  .purpose-grid{grid-template-columns:1fr}
+  .matrix{overflow-x:auto}
+  .matrix table{min-width:34rem}
+}
